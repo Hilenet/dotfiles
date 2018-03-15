@@ -1,0 +1,14 @@
+[user]
+  name = Hilenet
+  email = illogical.j@gmail.com
+[alias]
+  st = status
+  ch = checkout
+  br = branch
+[url "github:"]
+  pushInsteadOf = https://github.com/
+  pushInsteadOf = git@github.com
+[core]
+  # 日本語コミットの文字コード化を防げ
+  quotepath = false
+  editor = vim
