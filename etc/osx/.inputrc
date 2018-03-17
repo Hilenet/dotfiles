@@ -1,0 +1,5 @@
+"\e[1;5D": backward-word
+"\e[1;5C": forward-word
+
+set visible-stats on
+set completion-ignore-case on
