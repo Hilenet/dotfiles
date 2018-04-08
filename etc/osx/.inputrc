@@ -2,4 +2,4 @@
 "\e[1;5C": forward-word
 
 set visible-stats on
-set completion-ignore-case on
+#set completion-ignore-case on

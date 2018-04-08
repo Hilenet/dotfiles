@@ -3,3 +3,9 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let NERDTreeShowHidden = 1
+  nnoremap <silent><C-e> :NERDTreeToggle<CR>
+  nnoremap <C-l> gt
+  nnoremap <C-h> gT
+'''
