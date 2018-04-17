@@ -50,13 +50,14 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " ===
 set expandtab
 set smartindent
-set shiftwidth=4  " vim-gen(auto)
-set tabstop=4     " load
-set softtabstop=4 " input
+set shiftwidth=2  " vim-gen(auto)
+set tabstop=2     " load
+set softtabstop=2 " input
 
 augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.c setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.go setlocal tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.rb setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
