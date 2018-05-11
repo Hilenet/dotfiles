@@ -9,3 +9,12 @@ hook_add = '''
   nnoremap <C-l> gt
   nnoremap <C-h> gT
 '''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+  set noshowmode
+  let g:lightline = {
+    \ 'colorscheme': 'wombat'
+  \ }
+'''

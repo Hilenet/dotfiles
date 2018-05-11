@@ -1,5 +1,5 @@
 # visual
-export TERM=xterm-color
+export TERM=xterm-256color
 
 # use
 alias ls="ls -G"

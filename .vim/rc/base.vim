@@ -8,6 +8,8 @@ set cursorline
 set ruler
 set showmatch
 set laststatus=2
+
+set t_Co=256
 colorscheme koehler
 
 set pumheight=10  " complemention
@@ -43,7 +45,6 @@ set ignorecase
 set wrapscan
 set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
-
 
 " ===
 " indent
