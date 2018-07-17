@@ -2,12 +2,21 @@
 " dein
 " ===
 
+" dein works only above 7.4
+if v:version < 704
+  finish
+endif
+
 let s:dein_dir = expand('~/.vim/bundle')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
 " if non-exist, clone dein entity
 if !isdirectory(s:dein_repo_dir)
-  execute '!git clone https://github.com/Shougo/dein.vim.git' s:dein_repo_dir
+  if v:version < 800
+    execute '!git clone -b 1.5 https://github.com/Shougo/dein.vim.git' s:dein_repo_dir
+  else
+    execute '!git clone https://github.com/Shougo/dein.vim.git' s:dein_repo_dir
+  endif
 endif
 
 execute 'set runtimepath^=' . s:dein_repo_dir
