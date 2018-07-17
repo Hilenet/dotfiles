@@ -5,16 +5,32 @@ repo = 'Shougo/dein.vim'
 repo = 'scrooloose/nerdtree'
 hook_add = '''
   let NERDTreeShowHidden = 1
-  nnoremap <silent><C-e> :NERDTreeToggle<CR>
+  nnoremap <silent> <C-e> :NERDTreeToggle<CR>
   nnoremap <C-l> gt
   nnoremap <C-h> gT
 '''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   set noshowmode
   let g:lightline = {
-    \ 'colorscheme': 'wombat'
-  \ }
+      \   'colorscheme': 'wombat',
+      \   'active': {
+      \     'left': [ ['mode', 'paste'],
+      \               ['gitbranch', 'readonly', 'filename', 'modified'] ]
+      \   },
+      \   'component_function': {
+      \     'gitbranch': 'fugitive#head'
+      \   },
+      \ }
 '''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+[[plugins]]
+repo = 'kien/ctrlp.vim'
