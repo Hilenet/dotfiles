@@ -12,3 +12,4 @@
   # 日本語コミットの文字コード化を防げ
   quotepath = false
   editor    = vim
+  excludesfile = ~/.gitexclude
