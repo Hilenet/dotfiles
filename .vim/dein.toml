@@ -34,3 +34,7 @@ repo = 'mattn/emmet-vim'
 
 [[plugins]]
 repo = 'kien/ctrlp.vim'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
