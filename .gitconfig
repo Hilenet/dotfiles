@@ -2,9 +2,11 @@
   name  = Hilenet
   email = illogical.j@gmail.com
 [alias]
-  st = status
-  ch = checkout
   br = branch
+  ch = checkout
+  cp = cherry-pick
+  di = diff
+  st = status
 [url "github:"]
   pushInsteadOf = https://github.com/
   pushInsteadOf = git@github.com
