@@ -10,7 +10,12 @@ function cmd_exist() {
 
 # git
 if $(cmd_exist git) ; then
+  alias g=git
   alias gti=git
   source $HOME/.bash/.git-completion
 fi
 
+# docker-compose
+if $(cmd_exist git) ; then
+  alias doc="docker-compose"
+fi

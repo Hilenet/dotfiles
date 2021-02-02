@@ -1,5 +1,6 @@
 # visual
 export TERM=xterm-256color
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 function cmd_exist() {
   return $(type $1>/dev/null 2>&1)
