@@ -4,9 +4,12 @@ echo "--> osx initializing start..."
 # ===
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install ghq
-brew install fzf
-brew install tmux
+brew install \
+  ghq \
+  fzf \
+  tmux
+brew install --cask docker
+open /Applications/Docker.app
 
 # XDG config folder
 CONF_DIR=$HOME/.config

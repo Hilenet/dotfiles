@@ -16,6 +16,8 @@ if $(cmd_exist git) ; then
 fi
 
 # docker-compose
-if $(cmd_exist git) ; then
+if $(cmd_exist docker-compose) ; then
   alias doc="docker-compose"
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
