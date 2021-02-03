@@ -1,0 +1,104 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let NERDTreeShowHidden = 1
+  nnoremap <silent> <C-e> :NERDTreeToggle<CR>
+  nnoremap <C-l> gt
+  nnoremap <C-h> gT
+'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#buffer_idx_mode = 1
+'''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = '''
+  let g:user_emmet_install_global = 0
+  let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
+  autocmd FileType html,css,javascript EmmetInstall
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = '''
+  let g:fzf_nvim_statusline = 0
+  nnoremap <C-p> :Files<CR>
+  command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:50%', 'ctrl-p'), <bang>0)
+'''
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+hook_add = '''
+  let g:rustfmt_autosave=1
+'''
+
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_add= '''
+let g:go_fmt_command = "goimports"
+'''
+[[plugins]]
+repo = 'mattn/vim-goimports'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+hook_add = '''
+  let g:asyncomplete_popup_delay = 200
+'''
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+[[plugins]]
+repo = 'mattn/vim-lsp-icons'
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+  let g:lsp_diagnostics_enabled = 1
+  let g:lsp_diagnostics_echo_cursor = 1
+  let g:lsp_preview_float = 1
+  let g:lsp_signs_enabled = 1
+  let g:lsp_text_edit_enabled = 1
+  let g:lsp_signature_help_enabled = 1
+
+  nnoremap <silent> <C-]> :<C-u>LspDefinition<CR>
+'''
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
