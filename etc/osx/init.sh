@@ -3,6 +3,11 @@ echo "--> osx initializing start..."
 # installation for osx
 # ===
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install ghq
+brew install fzf
+brew install tmux
+
 # XDG config folder
 CONF_DIR=$HOME/.config
 if ! [[ -d $CONF_DIR ]]; then
